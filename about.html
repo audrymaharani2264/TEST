@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - EduTech</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">EduTech</div>
+    <button id="menu-toggle">&#9776;</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about-page">
+    <section class="hero">
+      <h1>Empowering Students for Future-Ready Careers</h1>
+      <p>Overcoming literacy challenges, skill gaps, and curriculum misalignment with industry needs — your journey to career success starts here with EduTech.</p>
+      <a href="courses.html" class="btn-primary">Explore Courses →</a>
+      <div class="hero-image">
+        <img src="assets/images/about-hero.jpg" alt="Students collaborating" />
+      </div>
+    </section>
+
+    <section class="about-content">
+      <h2>About EduTech</h2>
+      <p>
+        Founded in 2020, EduTech started with a powerful mission: to make high-quality, industry-relevant education accessible to everyone. Our founders—experts from tech, business, and education—identified a gap between academic theory and industry practice, and built EduTech to close that gap.
+      </p>
+      <p>
+        We provide flexible and practical learning experiences to thousands of learners worldwide. With interactive projects, real-world case studies, and expert mentorship, EduTech prepares learners for real challenges in tech, business, design, and other digital sectors.
+      </p>
+      <p>
+        Today, EduTech collaborates with top universities and leading companies to develop an evolving curriculum. We are committed to empowering personal and professional growth by ensuring that every learner is job-ready, confident, and inspired.
+      </p>
+    </section>
+
+    <section class="values">
+      <h2>Our Values</h2>
+      <div class="values-grid">
+        <div class="value-item">
+          <h3>Innovation</h3>
+          <p>We innovate continuously to offer relevant and future-ready learning experiences.</p>
+        </div>
+        <div class="value-item">
+          <h3>Quality</h3>
+          <p>Every course is curated and reviewed for the highest educational standards.</p>
+        </div>
+        <div class="value-item">
+          <h3>Community</h3>
+          <p>We foster a collaborative environment where learners connect and grow.</p>
+        </div>
+        <div class="value-item">
+          <h3>Integrity</h3>
+          <p>We uphold transparency, accountability, and mutual respect in all we do.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="vision-mission">
+      <h2>Our Vision & Mission</h2>
+      <p><strong>Vision:</strong> To become the most impactful online learning platform that bridges education with industry, enabling people to thrive in the digital era.</p>
+      <p><strong>Mission:</strong> To deliver flexible, accessible, and industry-aligned learning opportunities that empower individuals for personal and professional growth.</p>
+    </section>
+
+    <section class="why-choose-us">
+      <h2>Why Choose EduTech?</h2>
+      <ul>
+        <li>Real-world curriculum co-designed with industry experts & educators</li>
+        <li>Mentorship from experienced professionals</li>
+        <li>Project-based learning for practical skill application</li>
+        <li>Flexible schedules for students and working adults</li>
+        <li>Affordable plans with quality support & resources</li>
+        <li>Global learning community with networking opportunities</li>
+      </ul>
+    </section>
+
+    <section class="testimonials">
+      <h2>What Our Learners Say</h2>
+      <blockquote>
+        “EduTech helped me land my dream job in data analytics. Their practical approach and support system are unmatched.” 
+        <cite>- Amanda R., Data Analyst</cite>
+      </blockquote>
+    </section>
+
+    <section class="cta">
+      <h2>Ready to Start Your Journey?</h2>
+      <p>Join thousands of learners who have transformed their careers with EduTech.</p>
+      <a href="courses.html" class="btn-primary">Browse Courses</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">EduTech</div>
+      <p>Empowering your practical skills and career guidance with community!</p>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <p class="copyright">&copy; 2025 EduTech. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.about-page section');
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.2
+        }
+      );
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</body>
+</html>
